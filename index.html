@@ -32,9 +32,10 @@
     }
 
     .gold-gradient-text {
-      background: linear-gradient(135deg, #f3e5ab 0%, #d4af37 50%, #aa771c 100%);
+      background: linear-gradient(135deg, #fef08a 0%, #d4af37 50%, #aa771c 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
+      filter: drop-shadow(0 0 18px rgba(212, 175, 55, 0.4));
     }
 
     .gold-border-glow {
@@ -101,9 +102,9 @@
   <div class="max-w-6xl mx-auto px-4 sm:px-6 pt-10">
     <!-- Hero / Portada encerrada en Marco Dorado -->
     <header class="relative overflow-hidden py-16 px-6 sm:px-12 rounded-3xl hero-gold-frame bg-gradient-to-b from-amber-950/20 via-slate-900/40 to-slate-950/80">
-      <div class="max-w-4xl mx-auto text-center relative z-10">
+      <div class="max-w-5xl mx-auto text-center relative z-10">
         
-        <!-- Escudo Universitario Circular Original -->
+        <!-- Escudo Universitario Circular -->
         <div class="flex justify-center mb-8">
           <div class="relative group">
             <div class="absolute -inset-1 bg-gradient-to-r from-amber-500 to-yellow-600 rounded-full blur opacity-40 group-hover:opacity-75 transition duration-500"></div>
@@ -115,16 +116,18 @@
           CENTRO REGIONAL UNIVERSITARIO DE BOCAS DEL TORO • I SEMESTRE 2026
         </div>
         
-        <h1 class="font-serif-title text-4xl md:text-6xl font-extrabold gold-gradient-text tracking-tight mb-4">
+        <!-- Título principal resplandeciente en una sola línea -->
+        <h1 class="font-serif-title text-2xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold gold-gradient-text tracking-tight mb-6 whitespace-nowrap overflow-hidden text-ellipsis">
           CONTABILIDAD TRIBUTARIA I
         </h1>
+        
         <p class="text-xl text-slate-300 font-light max-w-2xl mx-auto mb-8">
           Módulo 1: Fundamentos del Sistema Tributario y Fiscal de la República de Panamá
         </p>
 
         <div class="inline-flex items-center space-x-3 px-6 py-3 rounded-xl bg-slate-900/90 border border-amber-500/40 text-slate-200 shadow-lg">
           <i data-lucide="graduation-cap" class="w-5 h-5 text-amber-400"></i>
-          <span>Docente: <strong class="text-amber-300">Profra. María del Carmen Pitty</strong></span>
+          <span>Docente: <strong class="text-amber-300">Profa. María del Carmen Pitty</strong></span>
         </div>
       </div>
     </header>
@@ -147,7 +150,7 @@
           </div>
           <h3 class="font-serif-title text-xl font-bold text-amber-200">Historia del Poder Tributario</h3>
           <p class="text-slate-300 text-sm leading-relaxed">
-            El poder tributario históricamente estuvo ligado al concepto de soberanía, en el cual el monarca establecía los impuestos a sus súbditos. Con el paso del tiempo, el poder se ha trasladado al pueblo, que delega en sus representantes la elaboración de una Constitución y faculta al Órgano Legislativo a reglamentar la potestad tributaria del Estado.
+            El poder tributario históricamente estuvo ligado al concepto de soberanía, en el cual el monarca establecía los impuestos a sus súbditos[cite: 2]. Con el paso del tiempo, el poder se ha trasladado al pueblo, que delega en sus representantes la elaboración de una Constitución y faculta al Órgano Legislativo a reglamentar la potestad tributaria del Estado[cite: 2].
           </p>
         </div>
 
@@ -159,19 +162,19 @@
           <ul class="space-y-2 text-slate-300 text-sm">
             <li class="flex items-start space-x-2">
               <i data-lucide="check-circle-2" class="w-4 h-4 text-amber-400 mt-1 shrink-0"></i>
-              <span><strong>Constitución Política de la República de Panamá:</strong> Norma suprema rectora.</span>
+              <span><strong>Constitución Política de la República de Panamá:</strong> Norma suprema rectora[cite: 3].</span>
             </li>
             <li class="flex items-start space-x-2">
               <i data-lucide="check-circle-2" class="w-4 h-4 text-amber-400 mt-1 shrink-0"></i>
-              <span><strong>Código Fiscal (Ley 8 de 27 de enero de 1956):</strong> Regula la Hacienda Nacional.</span>
+              <span><strong>Código Fiscal (Ley 8 de 27 de enero de 1956):</strong> Regula la Hacienda Nacional[cite: 3, 4].</span>
             </li>
             <li class="flex items-start space-x-2">
               <i data-lucide="check-circle-2" class="w-4 h-4 text-amber-400 mt-1 shrink-0"></i>
-              <span><strong>Ley del Presupuesto General del Estado:</strong> Planificación fiscal anual.</span>
+              <span><strong>Ley del Presupuesto General del Estado:</strong> Planificación fiscal anual[cite: 3].</span>
             </li>
             <li class="flex items-start space-x-2">
               <i data-lucide="check-circle-2" class="w-4 h-4 text-amber-400 mt-1 shrink-0"></i>
-              <span><strong>Decretos y Reglamentos:</strong> Desarrollan la aplicación de las leyes tributarias.</span>
+              <span><strong>Decretos y Reglamentos:</strong> Desarrollan la aplicación de las leyes tributarias[cite: 3].</span>
             </li>
           </ul>
         </div>
@@ -190,7 +193,7 @@
           <div class="text-3xl font-bold font-serif-title text-amber-400 mb-2">1903 - 1999</div>
           <h4 class="font-semibold text-slate-100 mb-2">Primeros Códigos Fiscales</h4>
           <p class="text-slate-300 text-xs leading-relaxed">
-            Código Fiscal inicial de 1916 elaborado por la Comisión Codificadora. Reemplazado formalmente por la <strong>Ley 8 de 27 de enero de 1956</strong>, que define la Hacienda Nacional (bienes nacionales y Tesoro Nacional).
+            Código Fiscal inicial de 1916 elaborado por la Comisión Codificadora[cite: 5]. Reemplazado formalmente por la <strong>Ley 8 de 27 de enero de 1956</strong>, que define la Hacienda Nacional (bienes nacionales y Tesoro Nacional)[cite: 4, 5].
           </p>
         </div>
 
@@ -198,8 +201,8 @@
           <div class="text-3xl font-bold font-serif-title text-amber-400 mb-2">2000 - 2009</div>
           <h4 class="font-semibold text-slate-100 mb-2">Equidad y Reforma Fiscal</h4>
           <p class="text-slate-300 text-xs leading-relaxed">
-            <strong>Ley 6 de 2005:</strong> Implementa el programa de Equidad Fiscal.<br>
-            <strong>Ley 49 de Septiembre de 2009:</strong> Reforma el Código Fiscal y adopta nuevas medidas hacendarias.
+            <strong>Ley 6 de 2005:</strong> Implementa el programa de Equidad Fiscal[cite: 5].<br>
+            <strong>Ley 49 de Septiembre de 2009:</strong> Reforma el Código Fiscal y adopta nuevas medidas hacendarias[cite: 5].
           </p>
         </div>
 
@@ -207,7 +210,7 @@
           <div class="text-3xl font-bold font-serif-title text-amber-400 mb-2">2010 - 2019</div>
           <h4 class="font-semibold text-slate-100 mb-2">Modernización e Institucionalidad</h4>
           <p class="text-slate-300 text-xs leading-relaxed">
-            <strong>Ley 8 de Marzo de 2010:</strong> Crea el <em>Tribunal Administrativo Tributario (TAT)</em>, modifica retenciones (1% ISR personas jurídicas), ajusta tasas escalonadas a personas naturales y deroga ciertos gastos deducibles.
+            <strong>Ley 8 de Marzo de 2010:</strong> Crea el <em>Tribunal Administrativo Tributario (TAT)</em>, modifica retenciones (1% ISR personas jurídicas), ajusta tasas escalonadas a personas naturales y deroga ciertos gastos deducibles[cite: 6].
           </p>
         </div>
       </div>
@@ -230,7 +233,7 @@
           </div>
         </div>
         <p class="text-slate-200 text-sm leading-relaxed">
-          Solo están sujetos al Impuesto sobre la Renta los ingresos provenientes de actividades comerciales, servicios o rentas de <strong>fuente panameña</strong> (producidos dentro del territorio nacional), independientemente de la nacionalidad, domicilio o residencia del contribuyente o de las partes involucradas.
+          Solo están sujetos al Impuesto sobre la Renta los ingresos provenientes de actividades comerciales, servicios o rentas de <strong>fuente panameña</strong> (producidos dentro del territorio nacional), independientemente de la nacionalidad, domicilio o residencia del contribuyente o de las partes involucradas[cite: 7].
         </p>
       </div>
 
@@ -242,7 +245,7 @@
             <span>Legalidad</span>
           </div>
           <p class="text-slate-300 text-xs">
-            Solo la Ley puede crear, modificar o suprimir tributos, exenciones, procedimientos de cobro y sanciones.
+            Solo la Ley puede crear, modificar o suprimir tributos, exenciones, procedimientos de cobro y sanciones[cite: 9].
           </p>
         </div>
 
@@ -252,7 +255,7 @@
             <span>Capacidad Económica</span>
           </div>
           <p class="text-slate-300 text-xs">
-            Los tributos deben gravar en proporción directa a la capacidad de pago sin llegar a ser confiscatorios.
+            Los tributos deben gravar en proporción directa a la capacidad de pago sin llegar a ser confiscatorios[cite: 9].
           </p>
         </div>
 
@@ -262,7 +265,7 @@
             <span>Generalidad</span>
           </div>
           <p class="text-slate-300 text-xs">
-            Todos deben contribuir al sostenimiento de los gastos públicos sin fueros ni privilegios especiales.
+            Todos deben contribuir al sostenimiento de los gastos públicos sin fueros ni privilegios especiales[cite: 10].
           </p>
         </div>
 
@@ -272,7 +275,7 @@
             <span>Igualdad</span>
           </div>
           <p class="text-slate-300 text-xs">
-            Panameños y extranjeros son iguales ante la ley en materia impositiva sin discriminación.
+            Panameños y extranjeros son iguales ante la ley en materia impositiva sin discriminación[cite: 10].
           </p>
         </div>
       </div>
@@ -368,16 +371,16 @@
             <h3 class="font-serif-title text-xl font-bold text-amber-200">Persona Natural</h3>
           </div>
           <blockquote class="text-xs italic text-slate-400 border-l-2 border-amber-500/50 pl-3">
-            "Son personas todos los individuos de la especie humana, cualquiera que sea su edad, sexo, estirpe o condición." — Código Civil
+            "Son personas todos los individuos de la especie humana, cualquiera que sea su edad, sexo, estirpe o condición." — Código Civil[cite: 13]
           </blockquote>
           <ul class="space-y-2 text-sm text-slate-300">
             <li class="flex items-center space-x-2">
               <i data-lucide="check" class="w-4 h-4 text-amber-400"></i>
-              <span>Asume obligaciones a título personal.</span>
+              <span>Asume obligaciones a título personal[cite: 13].</span>
             </li>
             <li class="flex items-center space-x-2">
               <i data-lucide="check" class="w-4 h-4 text-amber-400"></i>
-              <span>Responde y garantiza con todo su patrimonio personal.</span>
+              <span>Responde y garantiza con todo su patrimonio personal[cite: 13].</span>
             </li>
           </ul>
         </div>
@@ -389,13 +392,13 @@
             <h3 class="font-serif-title text-xl font-bold text-amber-200">Persona Jurídica (Art. 64)</h3>
           </div>
           <blockquote class="text-xs italic text-slate-400 border-l-2 border-amber-500/50 pl-3">
-            "Personas ficticias, capaces de ejercer derechos y contraer obligaciones civiles, y de ser representadas judicial y extrajudicialmente." — Código Civil
+            "Personas ficticias, capaces de ejercer derechos y contraer obligaciones civiles, y de ser representadas judicial y extrajudicialmente." — Código Civil[cite: 14]
           </blockquote>
           <ul class="space-y-1.5 text-xs text-slate-300">
-            <li>• Entidades políticas creadas por la Constitución o la Ley.</li>
-            <li>• Iglesias, congregaciones o asociaciones religiosas.</li>
-            <li>• Corporaciones y fundaciones de interés público.</li>
-            <li>• Asociaciones civiles o comerciales con personalidad propia.</li>
+            <li>• Entidades políticas creadas por la Constitución o la Ley[cite: 14].</li>
+            <li>• Iglesias, congregaciones o asociaciones religiosas[cite: 14].</li>
+            <li>• Corporaciones y fundaciones de interés público[cite: 14].</li>
+            <li>• Asociaciones civiles o comerciales con personalidad propia[cite: 14].</li>
           </ul>
         </div>
       </div>
@@ -453,7 +456,7 @@
       </div>
       
       <p class="text-xs text-slate-400 text-center italic">
-        * Nota: La prórroga extiende el plazo de presentación de la declaración, pero los impuestos causados y el Aviso de Operaciones deben liquidarse en la fecha ordinaria para evitar recargos e intereses.
+        * Nota: La prórroga extiende el plazo de presentación de la declaración, pero los impuestos causados y el Aviso de Operaciones deben liquidarse en la fecha ordinaria para evitar recargos e intereses[cite: 15].
       </p>
     </section>
 
@@ -514,7 +517,7 @@
   <footer class="border-t border-amber-500/20 glass-card py-8 px-6 text-center text-xs text-slate-400 space-y-2">
     <p class="font-serif-title font-semibold text-slate-200">UNIVERSIDAD DE PANAMÁ — CRU DE BOCAS DEL TORO</p>
     <p>Facultad de Administración de Empresas y Contabilidad • Asignatura: Contabilidad Tributaria I</p>
-    <p class="text-slate-500">Docente: Profra. María del Carmen Pitty • Semestre I, 2026</p>
+    <p class="text-slate-500">Docente: Profa. María del Carmen Pitty • Semestre I, 2026</p>
   </footer>
 
   <script>
