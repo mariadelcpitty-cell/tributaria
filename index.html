@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contabilidad Tributaria I - Universidad de Panamá</title>
+
+  <!-- Google Fonts & Tailwind CSS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;800&family=Plus+Jakarta+Sans:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <style>
+    :root {
+      --bg-dark: #0b0e14;
+      --card-bg: #131822;
+      --gold-primary: #d4af37;
+      --gold-light: #f3e5ab;
+      --gold-dark: #996515;
+    }
+
+    body {
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      background-color: var(--bg-dark);
+      color: #e2e8f0;
+    }
+
+    .font-serif-title {
+      font-family: 'Cinzel', serif;
+    }
+
+    .gold-gradient-text {
+      background: linear-gradient(135deg, #f3e5ab 0%, #d4af37 50%, #aa771c 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .gold-border-glow {
+      border: 1px solid rgba(212, 175, 55, 0.3);
+      box-shadow: 0 0 15px rgba(212, 175, 55, 0.08);
+    }
+
+    .gold-border-glow:hover {
+      border-color: rgba(212, 175, 55, 0.6);
+      box-shadow: 0 0 25px rgba(212, 175, 55, 0.2);
+    }
+
+    /* Marco dorado elegante para la portada */
+    .hero-gold-frame {
+      border: 2px solid #d4af37;
+      outline: 1px solid rgba(212, 175, 55, 0.3);
+      outline-offset: 6px;
+      box-shadow: 0 0 35px rgba(212, 175, 55, 0.15), inset 0 0 20px rgba(212, 175, 55, 0.05);
+    }
+
+    .glass-card {
+      background: rgba(19, 24, 34, 0.85);
+      backdrop-filter: blur(12px);
+    }
+
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar {
+      width: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #0b0e14;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #2a3447;
+      border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #d4af37;
+    }
+  </style>
+</head>
+<body class="min-h-screen flex flex-col selection:bg-amber-500 selection:text-black">
+
+  <!-- Navegación -->
+  <nav class="sticky top-0 z-50 glass-card border-b border-amber-500/20 px-6 py-4">
+    <div class="max-w-7xl mx-auto flex justify-between items-center">
+      <div class="flex items-center space-x-3">
+        <img src="https://upinforma.com/nuevo/images/noticias/1586716868logo.jpg" alt="Universidad de Panamá" class="w-10 h-10 object-contain rounded-full border border-amber-500/40">
+        <span class="font-serif-title font-bold text-lg text-amber-100 tracking-wide">UP | CRU Bocas del Toro</span>
+      </div>
+      <div class="hidden md:flex space-x-6 text-sm font-medium text-slate-300">
+        <a href="#marco-legal" class="hover:text-amber-400 transition-colors">Marco Legal</a>
+        <a href="#linea-tiempo" class="hover:text-amber-400 transition-colors">Historia</a>
+        <a href="#principios" class="hover:text-amber-400 transition-colors">Principios</a>
+        <a href="#estructura" class="hover:text-amber-400 transition-colors">Estructura</a>
+        <a href="#sujetos" class="hover:text-amber-400 transition-colors">Personas</a>
+        <a href="#calendario" class="hover:text-amber-400 transition-colors">Calendario DGI</a>
+        <a href="#codigos" class="hover:text-amber-400 transition-colors">Códigos</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Contenedor general para dar margen a la portada -->
+  <div class="max-w-6xl mx-auto px-4 sm:px-6 pt-10">
+    <!-- Hero / Portada encerrada en Marco Dorado -->
+    <header class="relative overflow-hidden py-16 px-6 sm:px-12 rounded-3xl hero-gold-frame bg-gradient-to-b from-amber-950/20 via-slate-900/40 to-slate-950/80">
+      <div class="max-w-4xl mx-auto text-center relative z-10">
+        
+        <!-- Escudo Universitario Circular Original -->
+        <div class="flex justify-center mb-8">
+          <div class="relative group">
+            <div class="absolute -inset-1 bg-gradient-to-r from-amber-500 to-yellow-600 rounded-full blur opacity-40 group-hover:opacity-75 transition duration-500"></div>
+            <img src="https://upinforma.com/nuevo/images/noticias/1586716868logo.jpg" alt="Escudo Universidad de Panamá" class="relative w-36 h-36 md:w-44 md:h-44 object-contain rounded-full bg-white p-1 border-2 border-amber-400 shadow-2xl">
+          </div>
+        </div>
+
+        <div class="inline-block px-4 py-1.5 rounded-full bg-amber-500/10 border border-amber-500/30 text-amber-300 font-semibold text-xs tracking-widest uppercase mb-4">
+          CENTRO REGIONAL UNIVERSITARIO DE BOCAS DEL TORO • I SEMESTRE 2026
+        </div>
+        
+        <h1 class="font-serif-title text-4xl md:text-6xl font-extrabold gold-gradient-text tracking-tight mb-4">
+          CONTABILIDAD TRIBUTARIA I
+        </h1>
+        <p class="text-xl text-slate-300 font-light max-w-2xl mx-auto mb-8">
+          Módulo 1: Fundamentos del Sistema Tributario y Fiscal de la República de Panamá
+        </p>
+
+        <div class="inline-flex items-center space-x-3 px-6 py-3 rounded-xl bg-slate-900/90 border border-amber-500/40 text-slate-200 shadow-lg">
+          <i data-lucide="graduation-cap" class="w-5 h-5 text-amber-400"></i>
+          <span>Docente: <strong class="text-amber-300">Profra. María del Carmen Pitty</strong></span>
+        </div>
+      </div>
+    </header>
+  </div>
+
+  <!-- Contenido Principal -->
+  <main class="max-w-6xl mx-auto px-6 py-12 space-y-20 flex-grow">
+
+    <!-- Sección 1: Historia & Marco Legal -->
+    <section id="marco-legal" class="space-y-8">
+      <div class="border-l-4 border-amber-500 pl-4">
+        <h2 class="font-serif-title text-2xl md:text-3xl font-bold text-amber-100">Evolución Histórica y Marco Legal</h2>
+        <p class="text-slate-400 text-sm">Origen de la potestad tributaria y fuentes normativas en Panamá</p>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-6">
+        <div class="glass-card p-6 rounded-2xl gold-border-glow space-y-4">
+          <div class="w-12 h-12 rounded-lg bg-amber-500/10 flex items-center justify-center text-amber-400 mb-2">
+            <i data-lucide="landmark" class="w-6 h-6"></i>
+          </div>
+          <h3 class="font-serif-title text-xl font-bold text-amber-200">Historia del Poder Tributario</h3>
+          <p class="text-slate-300 text-sm leading-relaxed">
+            El poder tributario históricamente estuvo ligado al concepto de soberanía, en el cual el monarca establecía los impuestos a sus súbditos. Con el paso del tiempo, el poder se ha trasladado al pueblo, que delega en sus representantes la elaboración de una Constitución y faculta al Órgano Legislativo a reglamentar la potestad tributaria del Estado.
+          </p>
+        </div>
+
+        <div class="glass-card p-6 rounded-2xl gold-border-glow space-y-4">
+          <div class="w-12 h-12 rounded-lg bg-amber-500/10 flex items-center justify-center text-amber-400 mb-2">
+            <i data-lucide="scale" class="w-6 h-6"></i>
+          </div>
+          <h3 class="font-serif-title text-xl font-bold text-amber-200">Marco Legal del Sistema Fiscal</h3>
+          <ul class="space-y-2 text-slate-300 text-sm">
+            <li class="flex items-start space-x-2">
+              <i data-lucide="check-circle-2" class="w-4 h-4 text-amber-400 mt-1 shrink-0"></i>
+              <span><strong>Constitución Política de la República de Panamá:</strong> Norma suprema rectora.</span>
+            </li>
+            <li class="flex items-start space-x-2">
+              <i data-lucide="check-circle-2" class="w-4 h-4 text-amber-400 mt-1 shrink-0"></i>
+              <span><strong>Código Fiscal (Ley 8 de 27 de enero de 1956):</strong> Regula la Hacienda Nacional.</span>
+            </li>
+            <li class="flex items-start space-x-2">
+              <i data-lucide="check-circle-2" class="w-4 h-4 text-amber-400 mt-1 shrink-0"></i>
+              <span><strong>Ley del Presupuesto General del Estado:</strong> Planificación fiscal anual.</span>
+            </li>
+            <li class="flex items-start space-x-2">
+              <i data-lucide="check-circle-2" class="w-4 h-4 text-amber-400 mt-1 shrink-0"></i>
+              <span><strong>Decretos y Reglamentos:</strong> Desarrollan la aplicación de las leyes tributarias.</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sección 2: Línea del Tiempo -->
+    <section id="linea-tiempo" class="space-y-8">
+      <div class="border-l-4 border-amber-500 pl-4">
+        <h2 class="font-serif-title text-2xl md:text-3xl font-bold text-amber-100">Línea del Tiempo del Sistema Tributario</h2>
+        <p class="text-slate-400 text-sm">Hitos normativos clave desde el inicio de la República</p>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-6">
+        <div class="glass-card p-6 rounded-2xl border border-amber-500/20 relative">
+          <div class="text-3xl font-bold font-serif-title text-amber-400 mb-2">1903 - 1999</div>
+          <h4 class="font-semibold text-slate-100 mb-2">Primeros Códigos Fiscales</h4>
+          <p class="text-slate-300 text-xs leading-relaxed">
+            Código Fiscal inicial de 1916 elaborado por la Comisión Codificadora. Reemplazado formalmente por la <strong>Ley 8 de 27 de enero de 1956</strong>, que define la Hacienda Nacional (bienes nacionales y Tesoro Nacional).
+          </p>
+        </div>
+
+        <div class="glass-card p-6 rounded-2xl border border-amber-500/20 relative">
+          <div class="text-3xl font-bold font-serif-title text-amber-400 mb-2">2000 - 2009</div>
+          <h4 class="font-semibold text-slate-100 mb-2">Equidad y Reforma Fiscal</h4>
+          <p class="text-slate-300 text-xs leading-relaxed">
+            <strong>Ley 6 de 2005:</strong> Implementa el programa de Equidad Fiscal.<br>
+            <strong>Ley 49 de Septiembre de 2009:</strong> Reforma el Código Fiscal y adopta nuevas medidas hacendarias.
+          </p>
+        </div>
+
+        <div class="glass-card p-6 rounded-2xl border border-amber-500/20 relative">
+          <div class="text-3xl font-bold font-serif-title text-amber-400 mb-2">2010 - 2019</div>
+          <h4 class="font-semibold text-slate-100 mb-2">Modernización e Institucionalidad</h4>
+          <p class="text-slate-300 text-xs leading-relaxed">
+            <strong>Ley 8 de Marzo de 2010:</strong> Crea el <em>Tribunal Administrativo Tributario (TAT)</em>, modifica retenciones (1% ISR personas jurídicas), ajusta tasas escalonadas a personas naturales y deroga ciertos gastos deducibles.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sección 3: Principios Tributarios -->
+    <section id="principios" class="space-y-8">
+      <div class="border-l-4 border-amber-500 pl-4">
+        <h2 class="font-serif-title text-2xl md:text-3xl font-bold text-amber-100">Principios Constitucionales Tributarios</h2>
+        <p class="text-slate-400 text-sm">Garantías y bases del ejercicio fiscal en Panamá</p>
+      </div>
+
+      <!-- Destacado: Territorialidad -->
+      <div class="glass-card p-6 md:p-8 rounded-2xl border-2 border-amber-500/40 bg-gradient-to-r from-amber-950/30 to-slate-900">
+        <div class="flex items-center space-x-3 mb-4">
+          <i data-lucide="map-pin" class="w-8 h-8 text-amber-400"></i>
+          <div>
+            <h3 class="font-serif-title text-2xl font-bold text-amber-200">Principio de Territorialidad (Art. 694 Código Fiscal)</h3>
+            <span class="text-xs text-amber-400/80 uppercase tracking-widest font-semibold">Base Fiscal de la República de Panamá</span>
+          </div>
+        </div>
+        <p class="text-slate-200 text-sm leading-relaxed">
+          Solo están sujetos al Impuesto sobre la Renta los ingresos provenientes de actividades comerciales, servicios o rentas de <strong>fuente panameña</strong> (producidos dentro del territorio nacional), independientemente de la nacionalidad, domicilio o residencia del contribuyente o de las partes involucradas.
+        </p>
+      </div>
+
+      <!-- Grid Principios -->
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="glass-card p-5 rounded-xl border border-slate-700/50 space-y-3">
+          <div class="text-amber-400 font-bold text-lg flex items-center space-x-2">
+            <i data-lucide="file-check" class="w-5 h-5"></i>
+            <span>Legalidad</span>
+          </div>
+          <p class="text-slate-300 text-xs">
+            Solo la Ley puede crear, modificar o suprimir tributos, exenciones, procedimientos de cobro y sanciones.
+          </p>
+        </div>
+
+        <div class="glass-card p-5 rounded-xl border border-slate-700/50 space-y-3">
+          <div class="text-amber-400 font-bold text-lg flex items-center space-x-2">
+            <i data-lucide="trending-up" class="w-5 h-5"></i>
+            <span>Capacidad Económica</span>
+          </div>
+          <p class="text-slate-300 text-xs">
+            Los tributos deben gravar en proporción directa a la capacidad de pago sin llegar a ser confiscatorios.
+          </p>
+        </div>
+
+        <div class="glass-card p-5 rounded-xl border border-slate-700/50 space-y-3">
+          <div class="text-amber-400 font-bold text-lg flex items-center space-x-2">
+            <i data-lucide="users" class="w-5 h-5"></i>
+            <span>Generalidad</span>
+          </div>
+          <p class="text-slate-300 text-xs">
+            Todos deben contribuir al sostenimiento de los gastos públicos sin fueros ni privilegios especiales.
+          </p>
+        </div>
+
+        <div class="glass-card p-5 rounded-xl border border-slate-700/50 space-y-3">
+          <div class="text-amber-400 font-bold text-lg flex items-center space-x-2">
+            <i data-lucide="balance" class="w-5 h-5"></i>
+            <span>Igualdad</span>
+          </div>
+          <p class="text-slate-300 text-xs">
+            Panameños y extranjeros son iguales ante la ley en materia impositiva sin discriminación.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sección 4: Estructura del Sistema Tributario -->
+    <section id="estructura" class="space-y-8">
+      <div class="border-l-4 border-amber-500 pl-4">
+        <h2 class="font-serif-title text-2xl md:text-3xl font-bold text-amber-100">Estructura de los Ingresos Corrientes</h2>
+        <p class="text-slate-400 text-sm">Clasificación presupuestaria del Estado Panameño</p>
+      </div>
+
+      <div class="glass-card p-6 rounded-2xl border border-amber-500/20 overflow-x-auto">
+        <div class="min-w-[700px] space-y-6">
+          
+          <!-- Nivel 1 -->
+          <div class="text-center">
+            <div class="inline-block px-8 py-3 rounded-xl bg-amber-500 text-slate-950 font-bold font-serif-title text-lg shadow-lg">
+              INGRESOS CORRIENTES
+            </div>
+          </div>
+
+          <!-- Nivel 2 -->
+          <div class="grid grid-cols-3 gap-4 text-center">
+            <div class="p-4 rounded-xl bg-slate-800 border border-amber-500/30">
+              <h4 class="font-bold text-amber-300 text-sm">Ingresos Tributarios</h4>
+            </div>
+            <div class="p-4 rounded-xl bg-slate-800 border border-slate-700">
+              <h4 class="font-bold text-slate-200 text-sm">Ingresos No Tributarios</h4>
+            </div>
+            <div class="p-4 rounded-xl bg-slate-800 border border-slate-700">
+              <h4 class="font-bold text-slate-200 text-sm">Otros Ingresos Corrientes</h4>
+            </div>
+          </div>
+
+          <!-- Nivel 3 - Detalle -->
+          <div class="grid grid-cols-3 gap-4 text-xs text-slate-300">
+            <!-- Tributarios -->
+            <div class="space-y-3">
+              <div class="p-3 rounded-lg bg-slate-900/80 border border-amber-500/20">
+                <span class="font-semibold text-amber-200 block mb-1">Impuestos Directos:</span>
+                <ul class="list-disc list-inside space-y-1 text-slate-400">
+                  <li>Sobre la Renta (ISR)</li>
+                  <li>Sobre Propiedad y Patrimonio</li>
+                  <li>Seguro Educativo</li>
+                </ul>
+              </div>
+              <div class="p-3 rounded-lg bg-slate-900/80 border border-amber-500/20">
+                <span class="font-semibold text-amber-200 block mb-1">Impuestos Indirectos:</span>
+                <ul class="list-disc list-inside space-y-1 text-slate-400">
+                  <li>I.T.B.M.S.</li>
+                  <li>Importación</li>
+                  <li>Consumo Selectivo</li>
+                  <li>Sobre Actos Jurídicos</li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- No Tributarios -->
+            <div class="p-3 rounded-lg bg-slate-900/80 border border-slate-800 space-y-2">
+              <ul class="space-y-2 text-slate-300">
+                <li>• Tasas, Derechos y otros</li>
+                <li>• Utilidades y Aportes de Empresas Estatales</li>
+                <li>• Ingresos Varios</li>
+              </ul>
+            </div>
+
+            <!-- Otros -->
+            <div class="p-3 rounded-lg bg-slate-900/80 border border-slate-800 space-y-2">
+              <ul class="space-y-2 text-slate-300">
+                <li>• Intereses del Fondo Soberano y colocaciones</li>
+                <li>• Otros Ingresos Financieros</li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Sección 5: Personas Naturales vs Jurídicas -->
+    <section id="sujetos" class="space-y-8">
+      <div class="border-l-4 border-amber-500 pl-4">
+        <h2 class="font-serif-title text-2xl md:text-3xl font-bold text-amber-100">Sujetos Pasivos de la Obligación Tributaria</h2>
+        <p class="text-slate-400 text-sm">Definiciones según el Código Civil de la República de Panamá</p>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-6">
+        <!-- Persona Natural -->
+        <div class="glass-card p-6 rounded-2xl gold-border-glow space-y-4">
+          <div class="flex items-center space-x-3 text-amber-400">
+            <i data-lucide="user" class="w-8 h-8"></i>
+            <h3 class="font-serif-title text-xl font-bold text-amber-200">Persona Natural</h3>
+          </div>
+          <blockquote class="text-xs italic text-slate-400 border-l-2 border-amber-500/50 pl-3">
+            "Son personas todos los individuos de la especie humana, cualquiera que sea su edad, sexo, estirpe o condición." — Código Civil
+          </blockquote>
+          <ul class="space-y-2 text-sm text-slate-300">
+            <li class="flex items-center space-x-2">
+              <i data-lucide="check" class="w-4 h-4 text-amber-400"></i>
+              <span>Asume obligaciones a título personal.</span>
+            </li>
+            <li class="flex items-center space-x-2">
+              <i data-lucide="check" class="w-4 h-4 text-amber-400"></i>
+              <span>Responde y garantiza con todo su patrimonio personal.</span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Persona Jurídica -->
+        <div class="glass-card p-6 rounded-2xl gold-border-glow space-y-4">
+          <div class="flex items-center space-x-3 text-amber-400">
+            <i data-lucide="building-2" class="w-8 h-8"></i>
+            <h3 class="font-serif-title text-xl font-bold text-amber-200">Persona Jurídica (Art. 64)</h3>
+          </div>
+          <blockquote class="text-xs italic text-slate-400 border-l-2 border-amber-500/50 pl-3">
+            "Personas ficticias, capaces de ejercer derechos y contraer obligaciones civiles, y de ser representadas judicial y extrajudicialmente." — Código Civil
+          </blockquote>
+          <ul class="space-y-1.5 text-xs text-slate-300">
+            <li>• Entidades políticas creadas por la Constitución o la Ley.</li>
+            <li>• Iglesias, congregaciones o asociaciones religiosas.</li>
+            <li>• Corporaciones y fundaciones de interés público.</li>
+            <li>• Asociaciones civiles o comerciales con personalidad propia.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sección 6: Calendario DGI e-Tax 2.0 -->
+    <section id="calendario" class="space-y-8">
+      <div class="border-l-4 border-amber-500 pl-4">
+        <h2 class="font-serif-title text-2xl md:text-3xl font-bold text-amber-100">Declaración Jurada de Renta (DGI e-Tax 2.0)</h2>
+        <p class="text-slate-400 text-sm">Plazos oficiales y prórrogas estipuladas en el Artículo 710 del Código Fiscal</p>
+      </div>
+
+      <div class="grid md:grid-cols-2 gap-6">
+        <!-- Tarjeta Personas Naturales -->
+        <div class="glass-card p-6 rounded-2xl border border-amber-500/30 space-y-4">
+          <div class="flex justify-between items-start">
+            <div>
+              <h3 class="font-serif-title text-xl font-bold text-amber-300">Persona Natural</h3>
+              <p class="text-xs text-slate-400">Asalariados, independientes y comerciantes</p>
+            </div>
+            <span class="px-3 py-1 rounded-full bg-amber-500/20 text-amber-300 text-xs font-bold">Anual</span>
+          </div>
+          <div class="space-y-3 pt-2">
+            <div class="flex justify-between items-center p-3 rounded-lg bg-slate-900/60">
+              <span class="text-xs text-slate-300">Plazo Ordinario:</span>
+              <span class="font-bold text-amber-400">Hasta el 15 de Marzo</span>
+            </div>
+            <div class="flex justify-between items-center p-3 rounded-lg bg-slate-900/60">
+              <span class="text-xs text-slate-300">Con Prórroga Autorizada:</span>
+              <span class="font-bold text-amber-200">Hasta el 15 de Abril</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Tarjeta Personas Jurídicas -->
+        <div class="glass-card p-6 rounded-2xl border border-amber-500/30 space-y-4">
+          <div class="flex justify-between items-start">
+            <div>
+              <h3 class="font-serif-title text-xl font-bold text-amber-300">Persona Jurídica</h3>
+              <p class="text-xs text-slate-400">Empresas, sociedades y corporaciones</p>
+            </div>
+            <span class="px-3 py-1 rounded-full bg-amber-500/20 text-amber-300 text-xs font-bold">Anual</span>
+          </div>
+          <div class="space-y-3 pt-2">
+            <div class="flex justify-between items-center p-3 rounded-lg bg-slate-900/60">
+              <span class="text-xs text-slate-300">Plazo Ordinario:</span>
+              <span class="font-bold text-amber-400">Hasta el 31 de Marzo</span>
+            </div>
+            <div class="flex justify-between items-center p-3 rounded-lg bg-slate-900/60">
+              <span class="text-xs text-slate-300">Con Prórroga Autorizada:</span>
+              <span class="font-bold text-amber-200">Hasta el 30 de Abril</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <p class="text-xs text-slate-400 text-center italic">
+        * Nota: La prórroga extiende el plazo de presentación de la declaración, pero los impuestos causados y el Aviso de Operaciones deben liquidarse en la fecha ordinaria para evitar recargos e intereses.
+      </p>
+    </section>
+
+    <!-- Sección 7: Catálogo de Códigos de Impuesto -->
+    <section id="codigos" class="space-y-8">
+      <div class="border-l-4 border-amber-500 pl-4">
+        <h2 class="font-serif-title text-2xl md:text-3xl font-bold text-amber-100">Catálogo de Códigos de Impuesto DGI</h2>
+        <p class="text-slate-400 text-sm">Códigos oficiales para la confección de boletas de pago</p>
+      </div>
+
+      <div class="glass-card p-6 rounded-2xl border border-amber-500/20 space-y-4">
+        <!-- Buscador -->
+        <div class="relative">
+          <i data-lucide="search" class="w-5 h-5 absolute left-3 top-3.5 text-slate-400"></i>
+          <input type="text" id="searchInput" onkeyup="filterCodes()" placeholder="Buscar por código o nombre de impuesto..." class="w-full pl-10 pr-4 py-3 rounded-xl bg-slate-900/80 border border-slate-700 text-slate-100 placeholder-slate-500 focus:outline-none focus:border-amber-500 text-sm">
+        </div>
+
+        <!-- Tabla -->
+        <div class="overflow-x-auto">
+          <table class="w-full text-left text-sm" id="taxTable">
+            <thead class="bg-amber-500/10 text-amber-300 font-serif-title text-xs uppercase">
+              <tr>
+                <th class="p-3 rounded-l-lg">Código</th>
+                <th class="p-3 rounded-r-lg">Descripción del Impuesto</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-slate-800 text-slate-300">
+              <tr><td class="p-3 font-mono font-bold text-amber-400">101</td><td class="p-3">Renta Natural</td></tr>
+              <tr><td class="p-3 font-mono font-bold text-amber-400">102</td><td class="p-3">Renta Jurídica</td></tr>
+              <tr><td class="p-3 font-mono font-bold text-amber-400">103</td><td class="p-3">Renta Zona Libre</td></tr>
+              <tr><td class="p-3 font-mono font-bold text-amber-400">111</td><td class="p-3">Complementario</td></tr>
+              <tr><td class="p-3 font-mono font-bold text-amber-400">120</td><td class="p-3">Transferencia de Bienes Inmuebles</td></tr>
+              <tr><td class="p-3 font-mono font-bold text-amber-400">130</td><td class="p-3">Inmuebles</td></tr>
+              <tr><td class="p-3 font-mono font-bold text-amber-400">140</td><td class="p-3">Licencia Comercial / Aviso de Operación</td></tr>
+              <tr><td class="p-3 font-mono font-bold text-amber-400">202</td><td class="p-3">I.T.B.M.S.</td></tr>
+              <tr><td class="p-3 font-mono font-bold text-amber-400">206</td><td class="p-3">Impuesto Selectivo al Consumo de Combustible</td></tr>
+              <tr><td class="p-3 font-mono font-bold text-amber-400">207</td><td class="p-3">Impuesto Selectivo al Consumo de Cervezas</td></tr>
+              <tr><td class="p-3 font-mono font-bold text-amber-400">208</td><td class="p-3">Impuesto Selectivo al Consumo de Licores</td></tr>
+              <tr><td class="p-3 font-mono font-bold text-amber-400">209</td><td class="p-3">Impuesto Selectivo al Consumo de Vinos</td></tr>
+              <tr><td class="p-3 font-mono font-bold text-amber-400">210</td><td class="p-3">Impuesto Selectivo al Consumo de Gaseosas</td></tr>
+              <tr><td class="p-3 font-mono font-bold text-amber-400">211</td><td class="p-3">Impuesto Selectivo al Consumo de Cigarrillos</td></tr>
+              <tr><td class="p-3 font-mono font-bold text-amber-400">212</td><td class="p-3">Impuesto Selectivo al Consumo de Alcohol</td></tr>
+              <tr><td class="p-3 font-mono font-bold text-amber-400">213</td><td class="p-3">Impuesto Selectivo al Consumo de Joyas / Armas</td></tr>
+              <tr><td class="p-3 font-mono font-bold text-amber-400">214</td><td class="p-3">Impuesto Selectivo al Consumo de TV / Móvil</td></tr>
+              <tr><td class="p-3 font-mono font-bold text-amber-400">218</td><td class="p-3">Multas Tributarias</td></tr>
+              <tr><td class="p-3 font-mono font-bold text-amber-400">308</td><td class="p-3">Declaración de Impuesto de Timbres</td></tr>
+              <tr><td class="p-3 font-mono font-bold text-amber-400">315</td><td class="p-3">Tasa Única</td></tr>
+              <tr><td class="p-3 font-mono font-bold text-amber-400">319</td><td class="p-3">Seguro Educativo</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Pie de Página -->
+  <footer class="border-t border-amber-500/20 glass-card py-8 px-6 text-center text-xs text-slate-400 space-y-2">
+    <p class="font-serif-title font-semibold text-slate-200">UNIVERSIDAD DE PANAMÁ — CRU DE BOCAS DEL TORO</p>
+    <p>Facultad de Administración de Empresas y Contabilidad • Asignatura: Contabilidad Tributaria I</p>
+    <p class="text-slate-500">Docente: Profra. María del Carmen Pitty • Semestre I, 2026</p>
+  </footer>
+
+  <script>
+    // Lucide Icons Initialization
+    lucide.createIcons();
+
+    // Filtro interactivo para la tabla de códigos
+    function filterCodes() {
+      const input = document.getElementById("searchInput");
+      const filter = input.value.toUpperCase();
+      const table = document.getElementById("taxTable");
+      const tr = table.getElementsByTagName("tr");
+
+      for (let i = 1; i < tr.length; i++) {
+        let tdCode = tr[i].getElementsByTagName("td")[0];
+        let tdName = tr[i].getElementsByTagName("td")[1];
+        if (tdCode || tdName) {
+          let codeValue = tdCode.textContent || tdCode.innerText;
+          let nameValue = tdName.textContent || tdName.innerText;
+          if (codeValue.toUpperCase().indexOf(filter) > -1 || nameValue.toUpperCase().indexOf(filter) > -1) {
+            tr[i].style.display = "";
+          } else {
+            tr[i].style.display = "none";
+          }
+        }
+      }
+    }
+  </script>
+</body>
+</html>
